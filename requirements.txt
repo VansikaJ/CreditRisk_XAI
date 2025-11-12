@@ -1,0 +1,23 @@
+# Core Libraries
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.5.2
+matplotlib==3.9.1
+seaborn==0.13.2
+plotly==5.23.0
+
+# Explainable AI
+shap==0.44.0
+lime==0.2.0.1
+
+# Web App / UI
+streamlit==1.38.0
+
+# Utility
+joblib==1.4.2
+xgboost==2.1.1
+lightgbm==4.3.0
+
+# Optional (if used)
+statsmodels==0.14.3
+imblearn==0.12.3
