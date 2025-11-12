@@ -37,4 +37,4 @@ The system enhances transparency in financial decision-making by providing an in
 ## 🚀 Run Locally
 1. Clone this repository:
    ```bash
-   git clone https://github.com/<your-username>/explainable-credit-risk-model.git
+   git clone https://github.com/VansikaJ/explainable-credit-risk-model.git
