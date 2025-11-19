@@ -56,4 +56,4 @@ The system predicts a user’s credit approval probability, visualizes results, 
 
 4. Run the app:
    ```bash
-   streamlit app.py
+   streamlit app1.py
