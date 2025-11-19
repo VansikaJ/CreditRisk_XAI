@@ -1,105 +1,145 @@
-# 💳 Interactive Credit Approval Prediction and Explainability  
-**An Explainable AI (XAI) Framework for Transparent Credit Risk Assessment**
+💳 Credit Approval Simulator with LIME Explainability
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Streamlit](https://img.shields.io/badge/Framework-Streamlit-red)
-![ExplainableAI](https://img.shields.io/badge/Explainability-SHAP%20%7C%20LIME-orange)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+Interactive Streamlit Application for Credit Risk Prediction & Transparent Financial Decision-Making
 
----
+📘 Overview
 
-## 🧠 Abstract  
-This project presents an explainable machine learning framework for **credit risk assessment**, integrating data preprocessing, model training, evaluation, and explainability tools such as **SHAP** and **LIME**.  
-The system uses a **Random Forest classifier** to predict credit approval outcomes and provides interpretable explanations for each decision.  
-An interactive **Streamlit-based interface** enables users to visualize model predictions, explore *“what-if”* scenarios, and understand feature contributions — enhancing transparency and user trust in financial systems.
+This project implements an Explainable Credit Approval Simulator built using Streamlit, Scikit-learn, LIME, Plotly, and Joblib.
+The app predicts the credit approval probability of an applicant in real time and provides:
 
----
+🔍 Financial What-If Analysis
 
-## 📌 Problem Statement  
-Traditional credit scoring systems are often **opaque**, offering applicants little insight into why their applications are approved or rejected.  
-This project addresses this issue by developing an **interactive, explainable credit approval system** that:  
-- Predicts credit approval probability using machine learning.  
-- Explains decisions using **SHAP** and **LIME**.  
-- Allows users to test *what-if* scenarios (e.g., changes in income or employment).  
-- Promotes accountability, fairness, and transparency in automated credit decisions.
+🧠 LIME-based explainability
 
----
+📊 Gauge visualizations and credit score levels
 
-## ⚙️ System Architecture  
+📝 Personalized credit improvement suggestions
 
-### 🧩 Modules
-1. **Data Input & Preprocessing** – Cleans, encodes, and normalizes input data.  
-2. **Model Training & Evaluation** – Implements and compares ML models (Logistic Regression, Decision Tree, Random Forest, SVM, KNN, Gradient Boosting).  
-3. **Explainability Module** – Uses **SHAP** for global feature importance and **LIME** for local interpretability.  
-4. **Interactive What-If Analysis** – Users modify inputs and instantly observe changes in approval probability.  
-5. **Visualization Layer** – Displays feature importance plots, LIME explanations, and prediction outcomes.
+The system is designed to be intuitive, visually appealing, and fully interactive for users, credit analysts, and students studying explainable AI.
 
----
+🚀 Features
+🔮 1. Real-Time Credit Approval Prediction
 
-## 🧮 Methodology  
+Uses a trained Machine Learning model with scaled and encoded inputs
 
-- **Dataset:** Demographic, employment, and financial features.  
-- **Preprocessing:** Missing value imputation, outlier treatment (IQR method), label encoding, and feature scaling.  
-- **Feature Selection:** Chi-Square, Z-Test, and Recursive Feature Elimination (RFE).  
-- **Model Training:** Six ML algorithms evaluated; **Random Forest** achieved the best performance.  
-- **Evaluation Metrics:** Accuracy, Precision, Recall, F1-Score, ROC-AUC, Cross-Validation.  
+Instant approval probability with visual gauge
 
-| Model | Test Accuracy | CV Accuracy | AUC |
-|:------|:--------------:|:------------:|:----:|
-| Logistic Regression | 0.87 | 0.91 | 0.61 |
-| Decision Tree | 0.85 | 0.88 | 0.71 |
-| **Random Forest** | **0.90** | **0.93** | **0.74** |
-| SVM | 0.87 | 0.91 | 0.71 |
-| KNN | 0.90 | 0.89 | 0.70 |
-| Gradient Boosting | 0.89 | 0.92 | 0.74 |
+🧠 2. LIME Explainability
 
----
+Shows the influence of each feature
 
-## 🧠 Explainable AI (XAI)
-- **Global Explanations (SHAP):** Identify features most influencing credit approval (Income, Age, Employment Years).  
-- **Local Explanations (LIME):** Show *why* a specific prediction was made, helping users identify actionable factors.  
-- **Interactive Transparency:** Real-time interpretability through Streamlit’s LIME visualization tab.  
+Displays positive/negative contributions to the prediction
 
----
+🧩 3. Financial Input Interface
 
-## 🌐 App Overview  
-**Built with:** Streamlit | Scikit-learn | SHAP | LIME | Plotly | Pandas | NumPy  
+Users can adjust:
 
-**Key Features:**  
-- Interactive sliders for user inputs (income, employment years, education, etc.)  
-- Real-time prediction and approval probability visualization  
-- *What-If* scenario testing  
-- LIME plots for interpretability  
-- Confidence gauge and feature importance visualization  
+Employment years
 
----
+Age
 
-## 📈 Results & Insights  
-✅ **Best Model:** Random Forest (Accuracy = 91%, AUC = 0.74)  
-✅ **Explainability:** SHAP and LIME improved user understanding of ML decisions  
-✅ **Deployment:** Fully functional Streamlit app for credit officers and applicants  
+Income
 
----
+Education
 
-## 💡 Future Enhancements  
-- Integrate **real-time financial data** and external credit bureau APIs.  
-- Implement **fairness auditing** and **bias detection**.  
-- Deploy as a **cloud-based API** using AWS / GCP.  
-- Add **deep learning models** or **AutoML** for advanced performance.  
-- Develop a **mobile-friendly dashboard** for accessibility.  
+Marital status
 
----
+Income type
 
-## ⚖️ License  
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+📈 4. Credit Health Levels
 
----
+Bronze / Silver / Gold / Platinum categories
 
-## 🚀 Getting Started  
+Smart tips for better financial decisions
 
-### Installation  
-```bash
-git clone https://github.com/VansikaJ/CreditRisk_XAI.git
-cd CreditRisk_XAI
+🧮 5. Personalized Credit Coaching Engine
+
+The app evaluates the user’s profile and gives actionable improvement recommendations.
+
+🛠️ Technologies Used
+Area	Tool
+Frontend / UI	Streamlit
+Machine Learning	Scikit-learn, Joblib
+Explainability (XAI)	LIME
+Visualization	Plotly, Matplotlib
+Data Handling	Pandas
+📂 App Requirements
+
+Make sure your directory includes the required model and preprocessing files:
+
+scaler.pkl
+
+le_income.pkl
+
+le_education.pkl
+
+le_marital.pkl
+
+credit_model.pkl
+
+X_train.pkl
+
+app.py (or your chosen filename)
+
+▶️ How to Run the Application
+1️⃣ Install dependencies
 pip install -r requirements.txt
+
+2️⃣ Run Streamlit
+streamlit run app.py
+
+
+Your browser will open the app automatically.
+
+📌 How the Model Works
+
+User inputs → Encoded and scaled
+
+Model predicts probability of approval vs rejection
+
+LIME interprets how each feature contributed
+
+The app generates a Credit Health Score and coaching suggestions
+
+🧠 LIME Explainability
+
+The LIME tab displays:
+
+Feature importance ranking
+
+Contribution of each variable
+
+Visual explanation using Matplotlib
+
+This strengthens transparency and trust in model predictions, supporting AI ethics and responsible credit scoring practices.
+
+📦 Project Highlights
+
+Fully deployable ML-powered Streamlit application
+
+Combines prediction + explanation + financial coaching
+
+Clean UI with custom CSS styling
+
+Enables What-If simulation for financial decision support
+
+📝 Future Enhancements
+
+Deploying via Streamlit Cloud / AWS
+
+Adding SHAP for deeper explainability
+
+Including credit utilization & repayment history
+
+Adding multi-model comparison
+
+Building a user login dashboard for storing sessions
+
+📄 License
+
+This project is licensed under the MIT License.
+You may use, modify, and distribute it with proper attribution.
+
+👩‍💻 Author
+
+Vansika Jhawar
